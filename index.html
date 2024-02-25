@@ -1,20 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <link rel="stylesheet" href="style.css">
-  <title>Salary Calculator</title>
-</head>
-<body>
-  <header>
-    <h1>Salary Calculator</h1>
-  </header>
-  <main>
-    <h2>Add Employee</h2>
-    <h2>Employees</h2>
-  </main>
-  <footer>
-    <p>Total Monthly</p>
-  </footer>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Salary Calculator</title>
+  </head>
+  <body>
+    <header>
+      <h1>Salary Calculator</h1>
+    </header>
+    <main>
+      <h2>Add Employee</h2>
+      <div id="divForm">
+        <form id="submitForm" onSubmit="submitNewEmployee(event)">
+          First Name:
+          <input id="firstNameInput" type="text" />
+          Last Name:
+          <input id="lastNameInput" type="text" />
+          ID Number:
+          <input id="idNumberInput" type="number" />
+          Job Title:
+          <input id="jobTitleInput" type="text" />
+          Annual Salary:
+          <input id="annualSalaryInput" type="number" />
+          <input id="button" type="submit" value="Add New Employee" />
+        </form>
+      </div>
+      <h2>Employees</h2>
+      <div id="employeeDiv">
+        <table id="table" style="width: 100%">
+          <thead>
+            <tr>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>ID Number</th>
+              <th>Job Title</th>
+              <th>Annual Salary</th>
+            </tr>
+          </thead>
+          <tbody id="newAddedEmployee">
+            <tr>
+              <td>0</td>
+              <br />
+              <br />
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+    <footer>
+      <p>Total Monthly</p>
+    </footer>
+  </body>
 </html>
