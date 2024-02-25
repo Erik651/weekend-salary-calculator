@@ -1,3 +1,5 @@
+let yearlyTotalSalary = [];
+
 function addNewEmployeeForm(event) {
   {
     event.preventDefault();
@@ -24,4 +26,7 @@ function addNewEmployeeForm(event) {
   <td>${jobTitleVal}</td>
   <td>${annualSalaryVal}</td>
 </tr>`;
+
+  yearlyTotalSalary.push(annualSalaryVal);
+  console.log(yearlyTotalSalary);
 }
