@@ -12,7 +12,9 @@ function addNewEmployeeForm(event) {
   console.log(idNumberVal);
   let jobTitleVal = document.querySelector('#jobTitleInput').value;
   console.log(jobTitleVal);
-  let annualSalaryVal = document.querySelector('#annualSalaryInput').value;
+  let annualSalaryVal = parseInt(
+    document.querySelector('#annualSalaryInput').value
+  );
   console.log(annualSalaryVal);
 
   let addNewEmployeeTable = document.querySelector('#newAddedEmployee');
@@ -29,4 +31,29 @@ function addNewEmployeeForm(event) {
 
   yearlyTotalSalary.push(annualSalaryVal);
   console.log(yearlyTotalSalary);
+
+  function addedAnnualSalary(yearlyTotalSalary) {
+    let total = 0;
+    for (let i = 0; i < yearlyTotalSalary.length; i++) {
+      total += yearlyTotalSalary[i];
+    }
+    return total;
+  }
+
+  let sum = addedAnnualSalary(yearlyTotalSalary);
+
+  console.log(sum);
+
+  let monthlySum = sum / 12;
+  console.log(monthlySum);
+
+  let monthlyTotal = document.querySelector('footer');
+  monthlyTotal.innerHTML = `<tr>
+  <td>Monthly Salary</td>
+  <td>${monthlySum}</td></tr>`;
+
+  let element = document.getElementById('footerTable');
+  if (monthlySum > 50000) {
+    console.log('test');
+  }
 }
