@@ -55,5 +55,8 @@ function addNewEmployeeForm(event) {
   let element = document.getElementById('footerTable');
   if (monthlySum > 50000) {
     console.log('test');
+    element.id = 'newClass';
+  } else {
+    element.id = 'footerTable';
   }
 }
