@@ -29,7 +29,7 @@ function addNewEmployeeForm(event) {
     <td>${jobTitleVal}</td>
     <td>${monthlyEmployeeTotal}</td>
     <td>${annualSalaryVal}</td>
-    <button id="deleteButton" onclick="deleteAddNewEmployeeRow(event)">Delete</button>
+    <td><button class="deleteButton" onclick="deleteAddNewEmployeeRow(event)">Delete</button></td>
     </tr>`;
 
   yearlyTotalSalary.push(annualSalaryVal);
@@ -73,11 +73,13 @@ function addNewEmployeeForm(event) {
     backGroundElement.id = 'imageBody';
   }
   {
-    document.getElementById('firstNameInput').value = '';
-    document.getElementById('lastNameInput').value = '';
-    document.getElementById('idNumberInput').value = '';
-    document.getElementById('jobTitleInput').value = '';
-    document.getElementById('annualSalaryInput').value = '';
+    // document.getElementById('firstNameInput').value = '';
+    // document.getElementById('lastNameInput').value = '';
+    // document.getElementById('idNumberInput').value = '';
+    // document.getElementById('jobTitleInput').value = '';
+    // document.getElementById('annualSalaryInput').value = '';
+
+    document.getElementById('submitForm').reset();
   }
 }
 
@@ -90,6 +92,9 @@ function deleteAddNewEmployeeRow(event) {
 
   if (row) {
     row.parentNode.removeChild(row);
+    console.log('row deleted');
+  } else {
+    console.log('row not found');
   }
 }
 
