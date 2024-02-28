@@ -1,16 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link
+      href="https://fonts.cdnfonts.com/css/new-walt-disney-font"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.cdnfonts.com/css/dollar-bill" rel="stylesheet" />
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="style.css" />
     <title>Salary Calculator</title>
   </head>
-  <body>
+  <body id="imageBody">
     <header>
       <h1>Salary Calculator</h1>
     </header>
+    <br />
+    <br />
     <main>
       <h2>Add Employee</h2>
+      <br />
+      <br />
       <div id="divForm">
         <form id="submitForm" onSubmit="addNewEmployeeForm(event)">
           First Name:
@@ -26,32 +35,32 @@
           <input id="button" type="submit" value="Add New Employee" />
         </form>
       </div>
+      <br />
+      <br />
       <h2>Employees</h2>
       <div id="employeeDiv">
-        <table id="table" style="width: 100%">
+        <table id="table">
           <thead>
             <tr>
               <th>First Name</th>
+              <br />
               <th>Last Name</th>
+              <br />
               <th>ID Number</th>
+              <br />
               <th>Job Title</th>
+              <br />
+              <th>Monthly Salary</th>
+              <br />
               <th>Annual Salary</th>
             </tr>
           </thead>
-          <tbody id="newAddedEmployee">
-            <tr>
-              <td>0</td>
-              <br />
-              <br />
-              <td>0</td>
-              <td>0</td>
-              <td>0</td>
-              <td>0</td>
-            </tr>
-          </tbody>
+          <tbody id="newAddedEmployee"></tbody>
         </table>
       </div>
     </main>
+    <br />
+    <br />
     <footer id="footerTable">
       <p>Total Monthly</p>
     </footer>
